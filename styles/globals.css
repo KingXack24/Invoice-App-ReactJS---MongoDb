@@ -1,0 +1,423 @@
+
+/* ======= google fonts ============= */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+
+/* ======== css variables ========= */
+:root {
+  --primary-color: #8770e4;
+  --secondary-color: #1e2139;
+  --body-bg: #262d66;
+  --paid-status-bg: #1f2c3f;
+  --paid-status-color: #32cf9b;
+  --pending-status-bg: rgba(255, 143, 0, 0.06);
+  --pending-status-color: #ff8f00;
+  --small-text-color: #888eb0;
+  --draft-bg: #252945;
+  --delete-btn-bg: #ec5757;
+  --edit-btn-bg: #252945;
+}
+
+
+/* ======== base style ========= */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--body-bg);
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+}
+
+p {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+}
+
+.main_container {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: calc(100% - 10%);
+  padding: 30px 0px;
+}
+
+.btn {
+  padding: 7px 25px;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pending_status, .paid_status, .draft_status, .edit_btn, .delete_btn,
+.mark_as-btn, .draft_btn {
+  padding: 10px 25px;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.paid_status {
+  background: var(--paid-status-bg);
+  color: var(--paid-status-color);
+}
+
+.pending_status {
+  background: var(--pending-status-bg);
+  color: var(--pending-status-color);
+}
+
+
+
+
+
+
+/* ======== sidebar css ========= */
+
+.sidebar {
+  width: 120px;
+  height: 100vh;
+  background: var(--secondary-color) !important;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;  
+}
+
+.sidebar_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar_header, 
+.sidebar_bottom {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 20px 20px 0px;
+  background: var(--primary-color);
+
+}
+
+.sidebar_bottom {
+  background: var(--secondary-color);
+  border-top: 1px solid var(--primary-color) !important;
+}
+
+.sidebar_bottom img {
+  border-radius: 50%;
+}
+
+/* ======== home page style starts ========= */
+
+
+.invoice_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.invoice_header-logo h3 {
+  color: #fff;
+}
+
+.invoice_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  background: var(--secondary-color);
+  border-radius: 0.5rem;
+  margin-bottom: 1.9rem;
+  transition: 1s;
+  color: #fff;
+cursor: pointer;
+}
+
+.invoice_item:hover {
+  border: 1px solid var(--primary-color);
+  transform: scaleY(1.1);
+
+}
+
+invoice_container {
+  padding-bottom: 200px !important;
+}
+
+/* ======== home page style ends ========= */
+
+/* ========Invoice details style starts ========= */
+
+.back_btn {
+  margin-bottom: 1.9rem;
+}
+.back_btn h6 {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.details_status {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+.invoice_details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 0.5rem;
+  margin-bottom: 1.9rem;
+  background: var(--secondary-color);
+}
+
+.details_btns {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.mark_as-btn {
+  width: 130px !important;
+  padding: 10px 5px !important;
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.delete_btn {
+  background: var(--delete-btn-bg);
+  color: #fff;
+}
+
+.edit_btn {
+  background: var(--edit-btn-bg);
+  color: #fff;
+}
+
+.invoice_details {
+  background: var(--secondary-color);
+  padding: 30px;
+  border-radius: 10px 10px 0px 0px;
+
+}
+
+.details_box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.9rem;
+}
+.invoice_created-date {
+  margin-bottom: 1.9rem;
+}
+
+.invoice_created-date p, .invoice_payment {
+  margin-bottom: 5px;
+}
+
+.invoice_client-address p{
+  margin-bottom: 5px;
+}
+
+.invoice_client-address h4{
+  margin-bottom: 10px;
+}
+
+.invoice_item-box {
+  background: #252946;
+  padding: 30px;
+  border-radius: 7px 7px 0px 0px;
+}
+
+.list {
+  list-style: none;
+}
+.list_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.list_item-box {
+  width: 25% !important;
+  text-align: right !important;
+}
+
+.list_name-box {
+  width: 50% !important;
+}
+
+.grand_total {
+  background: #0c0e16;
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  border-radius: 0px 0px 7px 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ========Invoice details style ends ========= */
+
+/* ======== AddNew Page style starts ========= */
+
+.new_invoice {
+  width: 60%;
+  margin: auto;
+}
+
+.new_invoice-header {
+  margin-bottom: 1.9rem;
+}
+
+
+.form_group input {
+  padding: 12px 20px;
+  width: 100%;
+  border-radius: 5px;
+  background: var(--secondary-color);
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.form_group {
+  margin-bottom: 1.9rem;
+}
+
+.form_group p {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.inline_form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inline_group {
+  width: 48%;
+}
+
+.new_invoice-body {
+  padding-bottom: 40px;
+}
+
+.bill_title {
+  font-size: medium;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.bill_to {
+  margin-top: 50px;
+}
+
+.invoice_items {
+  margin-top: 70px;
+}
+
+.invoice_items h3 {
+  margin-bottom: 30px;
+}
+
+.add_item-btn {
+  width: 100%;
+  background: var(--secondary-color);
+  padding: 10px 25px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.draft_btn {
+  background: #1f2c3f;
+  color: #fff;
+  margin-right: 30px;
+  width: 150px !important;
+}
+.new_invoice_btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+
+/* ======= AddNew Page  style ends ========= */
+
+.disable {
+  cursor: none;
+  pointer-events: none;
+  opacity: 50%;
+}
+
+
+/* ============ modal style ================== */
+
+.delete_modal{
+  background: rgba(9, 10, 17, 0.76);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  display: none;
+}
+
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 330px;
+  padding: 30px;
+  background: var(--secondary-color);
+  z-index: 99999999;
+  border-radius: 5px;
+}
+
+.modal h3 {
+  margin-bottom: 15px;
+}
+.modal p {
+  font-size: 0.8rem;
+  line-height: 25px;
+}
+.modal_btns{
+  margin-top: 25px;
+}
+.modal_btns button:first-child{
+  background: #fff;
+  color: var(--secondary-color);
+}
+
+.showModal{
+  display: block;
+}
